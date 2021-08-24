@@ -1,0 +1,22 @@
+def web_page
+<<-PAGE
+    <!DOCTYPE html>
+    <html lang="ja">
+        <head>
+            <meta charset="UTF-8">
+            <title>タイトル</title>
+        </head>
+        <body>
+            <form action="/" method="POST">
+                <label>メール: <input type="mail" name="target_mail"></label>
+                <input type="submit" value="送信">
+            </form>            
+        </body>
+
+    </html>
+PAGE
+end
+  
+erb = ERB.new(web_page)
+result = erb.result
+puts result

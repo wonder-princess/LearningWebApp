@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+
+    <title>送信完了 | サンプル株式会社</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light bg-light navbar-expand-sm">
+            <div class="container-fluid">
+                <a href="#" class="text-reset">サンプル株式会社</a>
+
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav-bar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="nav-bar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="#" class="nav-link">会社情報</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">ニュース</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">採用情報</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link active">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1 class="mt-4 pb-4 border-bottom">送信完了</h1>
+        <p>ありがとうございました。送信を受け付けました。</p>
+        <p>3営業日以内をめどにご返信いたしますので、しばらくお待ちください。</p>
+        <h3 class="mt-4 pb-4">送信内容</h3>
+
+        <div>
+            <% company = params['ttarget_company'] %>
+            <% name = params['target_name'] %>
+            <% mail = params['target_mail'] %>
+            <% tell = params['target_tell'] %>
+            <% content = params['target_content'].gsub(/\r\n|\r|\n/, "<br>") %>
+            <div class="mb-3 row border-bottom">
+                <label class="col-sm-form-label col-sm-3">会社名：</label>
+
+                <div class="col-sm-9">
+                    <p><%= company %></p>
+                </div>
+            </div>
+
+            <div class="mb-3 row border-bottom">
+                <label class="col-sm-form-label col-sm-3">氏名：</label>
+
+                <div class="col-sm-9">
+                    <p><%= name %></p>
+                </div>
+            </div>
+
+            <div class="mb-3 row border-bottom">
+                <label class="col-sm-form-label col-sm-3">メール：</label>
+
+                <div class="col-sm-9">
+                    <p><%= mail %></p>
+                </div>
+            </div>
+
+            <div class="mb-3 row border-bottom">
+                <label class="col-sm-form-label col-sm-3">電話番号：</label>
+
+                <div class="col-sm-9">
+                    <p><%= tell %></p>
+                </div>
+            </div>
+
+            <div class="mb-3 row border-bottom">
+                <label class="col-sm-form-label col-sm-3">内容：</label>
+
+                <div class="col-sm-9">
+                    <p><%= content %></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mb-4">
+            <a href="/" class="btn btn-success">戻る</a>
+        </div>
+    </div>
+    <footer class="text-center pt-3 border-top">
+        &copy; 2021 SAMPLE Inc.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<script></script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+
+    <title>お問い合わせ | サンプル株式会社</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light bg-light navbar-expand-sm">
+            <div class="container-fluid">
+                <a href="#" class="">サンプル株式会社</a>
+
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav-bar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="nav-bar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="#" class="nav-link">会社情報</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">ニュース</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">採用情報</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link active">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1 class="mt-4 pb-4 border-bottom">お問い合わせ</h1>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <img class="mb-1" src="../public/icons/telephone-fill.svg" alt="お電話"> <strong>お電話：</strong>
+            </div>
+
+            <div class="col-sm-9">
+                <p>該当する内容の電話番号におかけください。</p>
+                <table class="mt-4 table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>内容</th>
+                            <th>電話番号</th>
+                            <th>担当</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>サービスに関するお問い合わせ</td>
+                            <td>03-0000-0000</td>
+                            <td>煌木</td>
+                        </tr>
+                        <tr>
+                            <td>採用に関するお問い合わせ</td>
+                            <td>03-0000-0001</td>
+                            <td>煌田</td>
+                        </tr>
+                        <tr>
+                            <td>会社情報に関するお問い合わせ</td>
+                            <td>03-0000-0002</td>
+                            <td>煌山</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img class="mb-1" src="../public/icons/info-circle-fill.svg" alt="営業時間"> 営業時間
+                    </div>
+
+                    <div class="card-body">
+                        平日10時〜19時（土日・祝日は対応しておりません）
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4 row">
+            <div class="col-sm-3">
+                <img class="mb-1" src="../public/icons/envelope.svg" alt="メール" > <strong>メール：</strong>
+            </div>
+
+            <div class="col-sm-9">
+                <p>
+                    プライバシーポリシーをご確認いただき、ご同意の上で、送信ボタンをクリックしてください。<br />
+                    お問い合わせの内容は、受付日から3営業日以内をめどにご返信いたします。
+                </p>
+                <form action="/" method="POST">
+                    <div class="mb-3 row">
+                        <label class="col-sm-form-label col-sm-3">会社名：</label>
+
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="target_company" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label class="col-sm-form-label col-sm-3">氏名：</label>
+
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="target_name" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label class="col-sm-form-label col-sm-3">メール：</label>
+
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="target_mail" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label class="col-sm-form-label col-sm-3">電話番号：</label>
+
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="target_tell" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label class="col-sm-form-label col-sm-3">内容：</label>
+
+                        <div class="col-sm-9">
+                            <textarea class="form-control" name="target_content" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <div class="offset-md-3 col-sm-9">
+                            <button type="submit" class="btn btn-success w-100">お問い合わせ内容を送信する</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center pt-3 border-top">
+        &copy; 2021 SAMPLE Inc.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

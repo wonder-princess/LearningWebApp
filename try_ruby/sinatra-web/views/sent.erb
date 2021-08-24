@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>タイトル</title>
+  </head>
+  <body>
+    <% time = Time.now %>
+    <p><%= time.strftime("現在時刻 %H時 %M分 %S秒") %></p>
+    <p><%= time.strftime("現在日時 %B,%d(%A) %Y %Z") %></p>
+    
+    <% mailReg = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}.[A-Za-z0-9]{1,}$/ %>
+    <% mail = params['target_mail'] %>
+    <% if mailReg.match(mail) %>
+      <p>メール：<%= mail %></p>
+    <% else %>
+      正しいアドレスを送信してください
+    <% end %>
+    
+  </body>
+</html>
