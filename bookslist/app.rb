@@ -6,7 +6,6 @@ require './sqlquery'
 
 user = Sqluser.new()
 user.setValue
-# connectStr = userObj.outputUser
 
 getBookslist = Sqlquery.executeQuery("getBookslist")
 sendBookTitle = Sqlquery.executeQuery("sendBookTitle")

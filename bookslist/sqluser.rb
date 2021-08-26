@@ -1,5 +1,4 @@
 class Sqluser
-    attr_accessor :host, :username, :password, :database, :encoding
 
     def setValue()
         @host = 'localhost'
@@ -7,10 +6,6 @@ class Sqluser
         @password = '8888'
         @database = 'booklist'
         @encoding = 'utf8'
-    end
-
-    def outputUser
-        user = "host: \'#{@host}\', username: \'#{@username}\', password: \'#{@password}\', database: \'#{@database}\', encoding: \'#{@encoding}\'"
     end
 
     def host

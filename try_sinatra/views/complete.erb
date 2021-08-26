@@ -14,7 +14,7 @@
     <header>
         <nav class="navbar navbar-light bg-light navbar-expand-sm">
             <div class="container-fluid">
-                <a href="#" class="text-reset">サンプル株式会社</a>
+                <a href="#" class="navbar-brand">サンプル株式会社</a>
 
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav-bar">
                     <span class="navbar-toggler-icon"></span>
@@ -38,13 +38,13 @@
         <h3 class="mt-4 pb-4">送信内容</h3>
 
         <div>
-            <% company = params['ttarget_company'] %>
+            <% company = params['target_company'] %>
             <% name = params['target_name'] %>
             <% mail = params['target_mail'] %>
             <% tell = params['target_tell'] %>
             <% content = params['target_content'].gsub(/\r\n|\r|\n/, "<br>") %>
             <div class="mb-3 row border-bottom">
-                <label class="col-sm-form-label col-sm-3">会社名：</label>
+                <label class="col-form-label col-sm-3">会社名：</label>
 
                 <div class="col-sm-9">
                     <p><%= company %></p>
@@ -52,7 +52,7 @@
             </div>
 
             <div class="mb-3 row border-bottom">
-                <label class="col-sm-form-label col-sm-3">氏名：</label>
+                <label class="col-form-label col-sm-3">氏名：</label>
 
                 <div class="col-sm-9">
                     <p><%= name %></p>
@@ -60,7 +60,7 @@
             </div>
 
             <div class="mb-3 row border-bottom">
-                <label class="col-sm-form-label col-sm-3">メール：</label>
+                <label class="col-form-label col-sm-3">メール：</label>
 
                 <div class="col-sm-9">
                     <p><%= mail %></p>
@@ -68,7 +68,7 @@
             </div>
 
             <div class="mb-3 row border-bottom">
-                <label class="col-sm-form-label col-sm-3">電話番号：</label>
+                <label class="col-form-label col-sm-3">電話番号：</label>
 
                 <div class="col-sm-9">
                     <p><%= tell %></p>
@@ -76,7 +76,7 @@
             </div>
 
             <div class="mb-3 row border-bottom">
-                <label class="col-sm-form-label col-sm-3">内容：</label>
+                <label class="col-form-label col-sm-3">内容：</label>
 
                 <div class="col-sm-9">
                     <p><%= content %></p>
