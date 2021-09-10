@@ -1,0 +1,15 @@
+<header>
+  <nav>
+    <% if logged_in? %>
+      <a href="/">Tasks</a>
+      <ul>
+        <li><%= link_to 'Logout', logout_path, method: :delete %></li>
+      </ul>
+    <% else %>
+      <ul class=>
+        <li><%= link_to 'Signup', signup_path %></li>
+        <li><%= link_to 'Login', login_path %></li>
+      </ul>
+    <% end %>
+  </nav>
+</header>
